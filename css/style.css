@@ -128,8 +128,8 @@
 
 .about ul li{
     display: inline;
-    margin-left: 20px;
-    color: lightgray;
+    margin-left: 16px;
+    color: lightslategray;
 }
 
 .about ul li:hover{
@@ -150,10 +150,171 @@
     margin: 25px 0;
 }
 
-.content{
-    width: 100%;
-    height: 500px;
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    padding-top: 0;
 }
+
+.dropdown a{
+    text-decoration: none;
+    color: lightslategray;
+}
+
+.dropdown-content {
+    margin-top: 27px;
+    position: absolute;
+    background-color: black;
+    box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.7s linear;
+}
+
+.dropdown-content a {
+    float: left;
+    color: lightslategray;
+    text-decoration: none;
+    display: block;
+    border-bottom: 1px solid lightslategray;
+    padding: 10px 0;
+    font-size: 12px;
+    width: 165px;
+    margin-left: -100px;
+    background: black;
+}
+
+.dropdown-content a:hover {
+    background-color: black;
+    color: white;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    opacity: 1;
+}
+
+.dropdown h2:hover{
+    color: black;
+    z-index: 1;
+}
+
+
+
+
+.firstslide{
+    width: 100%;
+    height: 590px;
+    position: relative;
+}
+
+.content img{
+    width: 100%;
+    height: 100%;
+}
+
+.button{
+    position: absolute;
+    top: 450px;
+    left: 100px;
+    width: 145px;
+    height: 80px;
+}
+
+.left{
+    width: 71px;
+    height: 80px;
+    background-color: #fff;
+    text-align: center;
+    float: left; 
+}
+
+.right{
+    width: 71px;
+    height: 80px;
+    background-color: #fff;
+    text-align: center;
+    float: right; 
+}
+
+.left p{
+    font-size: 30px;
+    margin-top: 25px;
+}
+
+.right p{
+    font-size: 30px;
+    margin-top: 25px;
+}
+
+.left:hover{background: lightslategray}
+.right:hover{background: lightslategray}
+.left:hover p{color: white}
+.right:hover p{color: white}
+
+.pictures{
+    position: absolute;
+    top: 450px;
+    left: 500px;
+    width: 420px;
+    height: 80px;
+}
+
+.picture{
+    width: 120px;
+    height: 80px;
+    margin: 0 10px;
+    float: left;
+}
+
+.picture img{
+    width: 100%;
+    height: 100%;
+}
+
+.read{
+    position: absolute;
+    top: 450px;
+    left: 1100px;
+    width: 180px;
+    height: 75px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.read h3{
+    margin-top: 30px;
+    color: dimgray;
+}
+
+.read:hover{background-color: lightslategray}
+.read:hover h3{color: white}
+
+.text{
+    position: absolute;
+    top: 160px;
+    left: 100px;
+    width: 60%;
+    height: 170px;
+}
+
+.text h1{
+    margin: 5px;
+    font-size: 60px;
+}
+
+.text p{
+    font-size: 30px;
+    margin-left: 15px;
+    margin-right: 50px;
+}
+
+
+
+
+
+
 
 .footer{
     width: 100%;
