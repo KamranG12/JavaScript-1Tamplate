@@ -39,6 +39,10 @@ x.addEventListener('click',function(){
 
 
 
+
+
+
+
 var right=document.getElementById("right");
 var left=document.getElementById("left");
 var img=document.querySelector(".slide img");
@@ -132,4 +136,116 @@ shar2.addEventListener('click',function(){
    h12.innerHTML=h122[2];
    h13.innerHTML=h133[2];
    document.getElementById('textall').style.color='white';
+})
+
+
+
+
+
+
+var writeh11=document.getElementById('writeh11');
+var writeh12=document.getElementById('writeh12');
+var writep=document.getElementById('writep');
+var writeh111=['Clean','Technical','Responsive','Documentation','Quality','Support'];
+var writeh122=['Code','Support','','','',''];
+var writep1=['We tried to make very high-quality product and so our code is very neat and clean. Whatever anyone could improve and modify the template to your liking.Technical Suppor','We tried to make very high-quality product and so our code is very neat and clean. Whatever anyone could improve and modify the template to your liking.','We tried to make very high-quality product and so our code is very neat and clean. Whatever anyone could improve and modify the template to your liking.','We tried to make very high-quality product and so our code is very neat and clean. Whatever anyone could improve and modify the template to your liking.','We tried to make very high-quality product and so our code is very neat and clean. Whatever anyone could improve and modify the template to your liking.','We tried to make very high-quality product and so our code is very neat and clean. Whatever anyone could improve and modify the template to your liking.'];
+var set1=document.getElementById('set1');
+var set2=document.getElementById('set2');
+var set3=document.getElementById('set3');
+var set4=document.getElementById('set4');
+var set5=document.getElementById('set5');
+var set6=document.getElementById('set6');
+
+writeh11.innerHTML=writeh111[0];
+writeh12.innerHTML=writeh122[0];
+writep.innerHTML=writep1[0];
+set1.style.backgroundColor='white';
+
+set1.addEventListener('click',function(){
+    writeh11.innerHTML=writeh111[0];
+    writeh12.innerHTML=writeh122[0];
+    writep.innerHTML=writep1[0];
+    set1.style.backgroundColor='white';
+    set2.style.backgroundColor='';
+    set3.style.backgroundColor='';
+    set4.style.backgroundColor='';
+    set5.style.backgroundColor='';
+    set6.style.backgroundColor='';
+})
+
+set2.addEventListener('click',function(){
+    writeh11.innerHTML=writeh111[1];
+    writeh12.innerHTML=writeh122[1];
+    writep.innerHTML=writep1[1];
+    set1.style.backgroundColor='';
+    set2.style.backgroundColor='white';
+    set3.style.backgroundColor='';
+    set4.style.backgroundColor='';
+    set5.style.backgroundColor='';
+    set6.style.backgroundColor='';
+})
+
+set3.addEventListener('click',function(){
+    writeh11.innerHTML=writeh111[2];
+    writeh12.innerHTML=writeh122[2];
+    writep.innerHTML=writep1[2];
+    set1.style.backgroundColor='';
+    set2.style.backgroundColor='';
+    set3.style.backgroundColor='white';
+    set4.style.backgroundColor='';
+    set5.style.backgroundColor='';
+    set6.style.backgroundColor='';
+})
+
+set4.addEventListener('click',function(){
+    writeh11.innerHTML=writeh111[3];
+    writeh12.innerHTML=writeh122[3];
+    writep.innerHTML=writep1[3];
+    set1.style.backgroundColor='';
+    set2.style.backgroundColor='';
+    set3.style.backgroundColor='';
+    set4.style.backgroundColor='white';
+    set5.style.backgroundColor='';
+    set6.style.backgroundColor='';
+})
+
+set5.addEventListener('click',function(){
+    writeh11.innerHTML=writeh111[4];
+    writeh12.innerHTML=writeh122[4];
+    writep.innerHTML=writep1[4];
+    set1.style.backgroundColor='';
+    set2.style.backgroundColor='';
+    set3.style.backgroundColor='';
+    set4.style.backgroundColor='';
+    set5.style.backgroundColor='white';
+    set6.style.backgroundColor='';
+})
+
+set6.addEventListener('click',function(){
+    writeh11.innerHTML=writeh111[5];
+    writeh12.innerHTML=writeh122[5];
+    writep.innerHTML=writep1[5];
+    set1.style.backgroundColor='';
+    set2.style.backgroundColor='';
+    set3.style.backgroundColor='';
+    set4.style.backgroundColor='';
+    set5.style.backgroundColor='';
+    set6.style.backgroundColor='white';
+})
+
+
+
+
+
+
+var buy=document.getElementById('buy');
+var buyp=document.getElementById('buyp');
+
+buyp.innerHTML='BUY THIS THEME';
+buy.addEventListener('mouseover',function(){
+    buyp.innerHTML='YES I WANT IT';
+})
+
+buy.addEventListener('mouseout',function(){
+    buyp.innerHTML='BUY THIS THEME';
 })
