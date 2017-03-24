@@ -249,3 +249,49 @@ buy.addEventListener('mouseover',function(){
 buy.addEventListener('mouseout',function(){
     buyp.innerHTML='BUY THIS THEME';
 })
+
+
+
+
+
+
+var next = 0;
+var margin=0;
+
+var slider7_width=document.getElementsByClassName('slider7')[0].clientWidth;
+var sliders7_length=document.querySelectorAll('.sliders7 .slider7').length;
+var sliders7=document.getElementsByClassName('sliders7')[0];
+    sliders7.style.transition="0.3s";
+
+var right2=document.getElementById('right2');
+var left2=document.getElementById('left2');
+
+right2.addEventListener('click',novbeti);
+
+function novbeti(){
+    next++;
+    margin -=slider7_width;
+    // console.log(next);
+    // console.log(margin);
+    sliders7.style.marginLeft= margin+'px';
+    if(next>=sliders7_length-3){
+        margin=0;
+        sliders7.style.marginLeft=margin+'px';
+        next=0;
+    }
+}
+
+left2.addEventListener('click',evvelki);
+
+function evvelki(){
+    next--;
+    margin +=slider7_width;
+    // console.log(margin);
+    //  console.log(next);
+    sliders7.style.marginLeft= margin+'px';
+    if(next<=0){
+        margin=3*(-slider7_width);
+       sliders7.style.marginLeft= margin+'px';
+       next=sliders7_length-3;
+    }  
+}
