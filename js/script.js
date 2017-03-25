@@ -295,3 +295,43 @@ function evvelki(){
        next=sliders7_length-3;
     }  
 }
+
+
+
+
+var next1 = 0;
+var margin1=0;
+
+var worker_width=document.getElementsByClassName('worker')[0].clientWidth;
+var team_length=document.querySelectorAll('.team .worker').length;
+var team=document.getElementsByClassName('team')[0];
+    team.style.transition="0.3s";
+
+var right3=document.getElementById('right3');
+var left3=document.getElementById('left3');
+
+right3.addEventListener('click',novbeti1);
+
+function novbeti1(){
+    next1++;
+    margin1 -=worker_width;
+    team.style.marginLeft= margin1+'px';
+    if(next1>=team_length-2){
+        margin1=0;
+        team.style.marginLeft=margin1+'px';
+        next1=0;
+    }
+}
+
+left3.addEventListener('click',evvelki1);
+
+function evvelki1(){
+    next1--;
+    margin1 +=worker_width;
+    team.style.marginLeft= margin1+'px';
+    if(next1<=0){
+        margin1=5*(-worker_width);
+       team.style.marginLeft= margin1+'px';
+       next1=team_length-2;
+    }  
+}

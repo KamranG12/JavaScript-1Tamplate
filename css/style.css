@@ -242,6 +242,7 @@
     left: 100px;
     width: 145px;
     height: 80px;
+    cursor: pointer;
 }
 
 .left{
@@ -288,6 +289,7 @@
     height: 80px;
     margin: 0 10px;
     float: left;
+    cursor: pointer;
 }
 
 .picture img{
@@ -303,6 +305,7 @@
     height: 75px;
     background-color: #fff;
     text-align: center;
+    cursor: pointer;
 }
 
 .read h3{
@@ -411,6 +414,7 @@
 .setting{
     height: 150px;
     position: relative;
+    cursor: pointer;
 }
 
 .setting:hover .png{
@@ -482,6 +486,7 @@
     margin-top: 70px;
     background-color: #1c1c1c;
     position: relative;
+    cursor: pointer;
 }
 
 .buy p{
@@ -499,6 +504,7 @@
     margin-left: 20px;
     margin-top: 70px;
     border: 2px solid lightslategray;
+    cursor: pointer;
 }
 
 .view p{
@@ -544,6 +550,7 @@
     left: 80%;
     width: 145px;
     height: 80px;
+    cursor: pointer;
 }
 
 .left2{
@@ -628,6 +635,45 @@
 
 
 
+
+.teammean{
+    width: 100%;
+    height: 580px;
+    position: relative;
+    background-image: url(../image/teambg.jpg);
+}
+
+.ourteam{
+    /*padding-top: 60px;*/
+}
+
+.ourteam .p{
+    padding-top: 70px;
+    font-size: 38px;
+}
+
+.button3{
+    padding-top: 60px;
+    margin-left:26px;
+}
+
+.team{
+    margin-top: 80px;
+    width: 300%;
+    height: 370px;
+}
+
+.worker{
+    height: 100%;
+    width: 390px;
+    float: left;
+}
+
+.worker img{
+    width: 94%;
+    height: 100%;
+    margin-left: 3%;
+}
 
 
 
