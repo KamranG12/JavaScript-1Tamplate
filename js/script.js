@@ -335,3 +335,18 @@ function evvelki1(){
        next1=team_length-2;
     }  
 }
+
+
+
+
+ var wordclients=document.getElementById('wordclients');
+     wordclients.style.transition='1s';
+document.getElementById('threedots').addEventListener('click', function(event) {
+        var index = event.target.getAttribute('index') - 1;
+        console.log(index)
+        for (var i = 0; i < threedots.childElementCount; i++) {
+            this.children[i].classList.remove('active');
+        }
+        this.children[index].classList.add('active');
+        wordclients.style.marginLeft=index*(-1170)+"px";
+    })

@@ -677,5 +677,225 @@
 
 
 
-.footer{
+
+.say{
+    position: relative;
 }
+
+.headsay .p{
+    font-size: 35px;
+    margin-top: 35px;
+}
+
+.threedots{
+    width: 120px;
+    height: 40px;
+    margin-top: 35px;
+}
+
+.dot{
+    width: 15px;
+    height: 15px;
+    margin-top: 20px;
+    margin-left: 10px;
+    border: 2px solid black;
+    border-radius: 50%;
+    float: left;
+    cursor: pointer;
+}
+
+.active{
+    background-color: black;
+    width: 19px;
+    height: 19px;
+    margin-top: 18px;
+}
+
+.wordclients{
+    width: 300%;
+    height: 200px;
+    margin-top: 50px;
+}
+
+.wordclient{
+    float: left;
+    width: 33.333%;
+}
+
+.wordclient .p1{
+    margin-top: 30px;
+    font-size: 30px;
+}
+
+.wordclient .p2{
+    margin-top: 30px;
+    font-size: 16px;
+    color: gray;
+}
+
+.wordclient .p2 b{
+    color: black;
+}
+
+
+
+
+
+.all{
+     position: relative;
+    z-index: 2;
+    background-color: white;
+}
+
+.hide{
+    width: 100%;
+    height: 400px;
+}
+
+.footer{
+    width: 100%;
+    height: 400px;
+    background-color: #1c1c1c;
+    position: fixed;
+    z-index: 1;
+    bottom: 0;
+    color:white;
+}
+
+.posts p{
+    font-size: 23px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.plan{
+    width: 90%;
+    height: 60px;
+    margin-top: 20px;
+    float: left;
+}
+
+.plan:hover{
+    transition: 0.4s;
+    opacity: 0.5;
+    }
+
+.plan img{
+    width: 100%;
+    height: 100%;
+}
+
+.planword{
+    cursor: pointer;
+}
+
+.planword .p1{
+    font-size: 14px;
+    margin-top: 3px;
+    margin-left: 5px;
+    color: #a8a8a8;
+}
+
+.planword .date{
+    font-size: 14px;
+    margin-top: -20px;
+    color: #434343;
+    margin-left: 5px;
+}
+
+.us p{
+    font-size: 23px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.us{
+    width: 80%;
+}
+
+.us .p1{
+    font-size: 13px;
+    margin-top: 1px;
+    line-height: 24px;
+        color: #999;
+}
+
+.us .p2{
+    font-size: 13px;
+    margin-top: -3px;
+    line-height: 24px;
+        color: #999;
+}
+
+.sosial{
+    height: 55px;
+}
+
+.sosial1{
+    border: 1px solid white;
+    height: 100%;
+    width: 18%;
+    margin-right: 6px;
+    opacity: 0.3;
+    cursor: pointer;
+}
+
+.sosial1:hover{
+    opacity: 1;
+    transition: 0.7s;
+
+}
+
+.sosial1 i{
+    font-size: 30px;
+    margin: 10px 0 0 15px;
+}
+
+.contact p{
+    font-size: 23px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.footer .contact{
+    width: 85%;
+}
+
+.inp input:first-child {
+    width: 100%;
+    height: 44px;
+    background: transparent;
+    border: 2px solid #242424;
+    color: #999;
+    outline: none;
+    margin-top: 20px;
+}
+.inp textarea {
+    width: 100%;
+    height: 95px;
+    background: transparent;
+    border: 2px solid #242424;
+    color: #999;
+    outline: none;
+    margin-top: 10px;
+}
+.inp input:last-child {
+    width: 160px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #242424;
+    color: #333;
+    outline: none;
+    cursor: pointer;
+    transition: 0.4s;
+    font-weight: 900;
+    font-size: 12px;
+    line-height: 20px;
+    margin-top: 10px;
+}
+
+.inp input:last-child:hover{
+    border: 2px solid white;
+    color: white;
+    transition: 0.4s;
+    }
