@@ -415,6 +415,8 @@
     height: 150px;
     position: relative;
     cursor: pointer;
+    width: 16.667%;
+    float: left;
 }
 
 .setting:hover .png{
@@ -899,3 +901,11 @@
     color: white;
     transition: 0.4s;
     }
+
+.active1{
+    border: 5px solid white;
+}
+
+.active2{
+    background-color: white;
+}

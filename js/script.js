@@ -18,23 +18,14 @@ input.addEventListener('focus',function(){
     this.value=" ";
 })
 
-click1.addEventListener('click',function(){
+click1.addEventListener('click',inputback);
+click2.addEventListener('click',inputback);
+x.addEventListener('click',inputback);
+function inputback(){
     x.style.width=83.3333+'%';
     y.style.width=16.667+'%';
     input.value='search';
-})
-
-click2.addEventListener('click',function(){
-    x.style.width=83.3333+'%';
-    y.style.width=16.667+'%';
-    input.value='search';
-})
-
-x.addEventListener('click',function(){
-    x.style.width=83.3333+'%';
-    y.style.width=16.667+'%';
-    input.value='search';
-})
+};
 
 
 
@@ -52,14 +43,15 @@ var text=document.querySelector(".text p");
 var h11=document.getElementById('h11');
 var h12=document.getElementById('h12');
 var h13=document.getElementById('h13');
+var pictures=document.getElementById('pictures');
 var h111=['CREATIVE','RESPONSIVE','AMAZING']
 var h122=['White','Design','Video']
 var h133=['Templates','Theme','Background']
 var txt=['The template is suitable for any company and the direction that appreciates style, purity and quality of the web site.','The template is suitable for any company and the direction that appreciates style, purity and quality of the web site.','The template is suitable for any company and the direction that appreciates style, purity and quality of the web site.']
 img.setAttribute("src",images[0]);
-h11.style.transition='1.5s';
-h12.style.transition='1s';
-h13.style.transition='0.5s';
+h11.style.transition='all 1.5s';
+h12.style.transition='all 1s';
+h13.style.transition='all 0.5s';
 text.innerHTML=txt[0];
 h11.innerHTML=h111[0];
 h12.innerHTML=h122[0];
@@ -74,6 +66,10 @@ right.addEventListener("click",function(){
     }else{
         document.getElementById('textall').style.color='white';
     }
+    for (var i = 0; i < pictures.childElementCount; i++) {
+            pictures.children[i].classList.remove('active1');
+        }
+            pictures.children[count].classList.add('active1');
     text.innerHTML=txt[count];
     h11.innerHTML=h111[count];
     h12.innerHTML=h122[count];
@@ -92,6 +88,10 @@ left.addEventListener("click",function(){
     }else{
         document.getElementById('textall').style.color='white';
     }
+    for (var i = 0; i < pictures.childElementCount; i++) {
+            pictures.children[i].classList.remove('active1');
+        }
+            pictures.children[count].classList.add('active1')
     text.innerHTML=txt[count];
     h11.innerHTML=h111[count];
     h12.innerHTML=h122[count];
@@ -99,43 +99,22 @@ left.addEventListener("click",function(){
 	img.setAttribute("src",images[count]);
 })
 
-var shar0=document.getElementById('shar0');
-
-shar0.addEventListener('click',function(){
-   img.setAttribute("src",images[0]);
-   shar0.style.border='5px solid white'; 
-   shar1.style.border='';
-   shar2.style.border='';
-   h11.innerHTML=h111[0];
-   h12.innerHTML=h122[0];
-   h13.innerHTML=h133[0];
-   document.getElementById('textall').style.color='black';
-})
-
-var shar1=document.getElementById('shar1');
-
-shar1.addEventListener('click',function(){
-   img.setAttribute("src",images[1]);
-   shar1.style.border='5px solid white';
-   shar0.style.border='';
-   shar2.style.border=''; 
-   h11.innerHTML=h111[1];
-   h12.innerHTML=h122[1];
-   h13.innerHTML=h133[1];
-   document.getElementById('textall').style.color='white';
-})
-
-var shar2=document.getElementById('shar2');
-
-shar2.addEventListener('click',function(){
-   img.setAttribute("src",images[2]);
-   shar2.style.border='5px solid white';
-   shar1.style.border='';
-   shar0.style.border=''; 
-   h11.innerHTML=h111[2];
-   h12.innerHTML=h122[2];
-   h13.innerHTML=h133[2];
-   document.getElementById('textall').style.color='white';
+document.getElementById('pictures').addEventListener('click',function(event){
+    var index1 = event.target.getAttribute('index1');
+    // console.log(event)
+    for (var i = 0; i < pictures.childElementCount; i++) {
+            pictures.children[i].classList.remove('active1');
+        }
+        pictures.children[index1].classList.add('active1');
+        img.setAttribute("src",images[index1]);
+        h11.innerHTML=h111[index1];
+        h12.innerHTML=h122[index1];
+        h13.innerHTML=h133[index1];
+        if(index1==0){
+            document.getElementById('textall').style.color='black';
+        }else{
+            document.getElementById('textall').style.color='white';
+        }
 })
 
 
@@ -149,89 +128,24 @@ var writep=document.getElementById('writep');
 var writeh111=['Clean','Technical','Responsive','Documentation','Quality','Support'];
 var writeh122=['Code','Support','','','',''];
 var writep1=['We tried to make very high-quality product and so our code is very neat and clean. Whatever anyone could improve and modify the template to your liking.Technical Suppor','We tried to make very high-quality product and so our code is very neat and clean. Whatever anyone could improve and modify the template to your liking.','We tried to make very high-quality product and so our code is very neat and clean. Whatever anyone could improve and modify the template to your liking.','We tried to make very high-quality product and so our code is very neat and clean. Whatever anyone could improve and modify the template to your liking.','We tried to make very high-quality product and so our code is very neat and clean. Whatever anyone could improve and modify the template to your liking.','We tried to make very high-quality product and so our code is very neat and clean. Whatever anyone could improve and modify the template to your liking.'];
-var set1=document.getElementById('set1');
-var set2=document.getElementById('set2');
-var set3=document.getElementById('set3');
-var set4=document.getElementById('set4');
-var set5=document.getElementById('set5');
-var set6=document.getElementById('set6');
 
 writeh11.innerHTML=writeh111[0];
 writeh12.innerHTML=writeh122[0];
 writep.innerHTML=writep1[0];
-set1.style.backgroundColor='white';
-
-set1.addEventListener('click',function(){
-    writeh11.innerHTML=writeh111[0];
-    writeh12.innerHTML=writeh122[0];
-    writep.innerHTML=writep1[0];
-    set1.style.backgroundColor='white';
-    set2.style.backgroundColor='';
-    set3.style.backgroundColor='';
-    set4.style.backgroundColor='';
-    set5.style.backgroundColor='';
-    set6.style.backgroundColor='';
+var boxed=document.getElementById('boxed')
+document.getElementById('gear').addEventListener('click',function(event){
+    set=event.target.getAttribute('set');
+    // console.log(set)
+    for (var i = 0; i < boxed.childElementCount; i++) {
+           boxed.children[i].classList.remove('active2');
+        }
+         writeh11.innerHTML=writeh111[set];
+         writeh12.innerHTML=writeh122[set];
+         writep.innerHTML=writep1[set];
+         boxed.children[set].classList.add('active2');
+        // console.log(boxed.children[set])
 })
 
-set2.addEventListener('click',function(){
-    writeh11.innerHTML=writeh111[1];
-    writeh12.innerHTML=writeh122[1];
-    writep.innerHTML=writep1[1];
-    set1.style.backgroundColor='';
-    set2.style.backgroundColor='white';
-    set3.style.backgroundColor='';
-    set4.style.backgroundColor='';
-    set5.style.backgroundColor='';
-    set6.style.backgroundColor='';
-})
-
-set3.addEventListener('click',function(){
-    writeh11.innerHTML=writeh111[2];
-    writeh12.innerHTML=writeh122[2];
-    writep.innerHTML=writep1[2];
-    set1.style.backgroundColor='';
-    set2.style.backgroundColor='';
-    set3.style.backgroundColor='white';
-    set4.style.backgroundColor='';
-    set5.style.backgroundColor='';
-    set6.style.backgroundColor='';
-})
-
-set4.addEventListener('click',function(){
-    writeh11.innerHTML=writeh111[3];
-    writeh12.innerHTML=writeh122[3];
-    writep.innerHTML=writep1[3];
-    set1.style.backgroundColor='';
-    set2.style.backgroundColor='';
-    set3.style.backgroundColor='';
-    set4.style.backgroundColor='white';
-    set5.style.backgroundColor='';
-    set6.style.backgroundColor='';
-})
-
-set5.addEventListener('click',function(){
-    writeh11.innerHTML=writeh111[4];
-    writeh12.innerHTML=writeh122[4];
-    writep.innerHTML=writep1[4];
-    set1.style.backgroundColor='';
-    set2.style.backgroundColor='';
-    set3.style.backgroundColor='';
-    set4.style.backgroundColor='';
-    set5.style.backgroundColor='white';
-    set6.style.backgroundColor='';
-})
-
-set6.addEventListener('click',function(){
-    writeh11.innerHTML=writeh111[5];
-    writeh12.innerHTML=writeh122[5];
-    writep.innerHTML=writep1[5];
-    set1.style.backgroundColor='';
-    set2.style.backgroundColor='';
-    set3.style.backgroundColor='';
-    set4.style.backgroundColor='';
-    set5.style.backgroundColor='';
-    set6.style.backgroundColor='white';
-})
 
 
 
@@ -343,7 +257,7 @@ function evvelki1(){
      wordclients.style.transition='1s';
 document.getElementById('threedots').addEventListener('click', function(event) {
         var index = event.target.getAttribute('index') - 1;
-        console.log(index)
+        console.log(event.target)
         for (var i = 0; i < threedots.childElementCount; i++) {
             this.children[i].classList.remove('active');
         }
